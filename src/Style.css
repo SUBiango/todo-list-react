@@ -1,0 +1,172 @@
+:root {
+    --primary: #E2F0F0;
+    --secondary: #7dc1c1;
+    --font-color: #000000;
+    --grey: #555555;
+    --white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary)
+}
+
+.container {
+    max-width: 400px;
+    height: 550px;
+    margin-top: 2rem;
+    position: relative;
+    background: var(--primary);
+    box-shadow: 1px 1px 13px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 0.25rem;
+}
+
+.header {
+    color: var(--font-color);
+    text-align: center;
+    padding: 2rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.add-task-input {
+    width: 70%;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+    outline-color: var(--secondary);
+}
+
+.add-task-button {
+    width: 30%;
+    padding: 7px;
+    border-radius: 4px;
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.add-task-button:hover {
+    background-color: var(--font-color);
+}
+
+.task-list-ul {
+    list-style-type: none;
+    margin: 1rem 2rem;
+}
+
+.task-list-li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task-checkbox {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--secondary);
+    border-radius: 4px;
+    margin-right: 8px;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+.task-checkbox:checked {
+    background-color: var(--secondary);
+}
+
+.task-checkbox:checked::after {
+    content: '\2713';
+    display: block;
+    font-weight: 900;
+    text-align: center;
+    line-height: .75rem;
+    color: var(--white);
+}
+
+.task-checkbox:checked + label {
+    text-decoration: line-through;
+    color: var(--grey);
+}
+
+.task-checkbox-label {
+    cursor: pointer;
+}
+
+.tada-wrapper {
+    background-color: var(--grey);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: .50rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0rem 0rem 0.25rem 0.25rem;
+    box-shadow: 1px 1px 13px -1px rgba(0, 0, 0, 0.25);
+}
+
+.tada-wrapper .btn {
+    background-color: var(--grey);
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        font-size: 1rem;
+    }
+    .container {
+        max-width: 300px;
+        height: 550px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+    
+    .add-task {
+        margin: 0 1rem;
+    }
+
+    .add-task-input {
+        font-size: .9rem;
+    }
+
+    .add-task-button {
+        font-size: .9rem;
+    }
+
+    .task-list-ul {
+        margin: 1rem 1rem;
+    }
+}
+
+
