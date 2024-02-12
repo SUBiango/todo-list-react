@@ -103,7 +103,7 @@ function ToDoContainer() {
 
   function handleClearAllTask() {
     tasks.splice(0, tasks.length)
-    setTasks([...tasks])
+    setTasks([])
   }
 
 
